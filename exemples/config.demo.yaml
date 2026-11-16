@@ -1,0 +1,32 @@
+# Configuration de démonstration : deux concurrents FICTIFS et des avis FICTIFS,
+# pour essayer le pipeline sans clé ni connexion :
+#   python -m veille_avis --config exemples/config.demo.yaml tout --sans-ia
+
+mon_produit:
+  nom: "MonSaaS"
+  description: >
+    Logiciel de devis et de factures pour les indépendants et les TPE,
+    avec relances automatiques et suivi des paiements.
+  fonctionnalites:
+    - "Création de devis et factures"
+    - "Relances automatiques des impayés"
+    - "Application mobile (consultation uniquement)"
+    - "Abonnement mensuel sans engagement"
+
+concurrents:
+  - nom: "OutilAlpha"
+    fichiers:
+      - chemin: "avis_fictifs_outilalpha.csv"
+        source: "capterra"
+
+  - nom: "OutilBeta"
+    fichiers:
+      - chemin: "avis_fictifs_outilbeta.json"
+        source: "g2"
+        colonnes:
+          texte: ["cons"]
+          note: "rating_value"
+        echelle_note: 10
+
+analyse:
+  note_max: 3

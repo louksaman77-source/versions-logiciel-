@@ -1,0 +1,75 @@
+# Configuration de la veille sur les avis concurrents.
+# Copie ce fichier en config.yaml puis remplace les exemples par tes vraies valeurs.
+
+# Ton produit : sert à dire, pour chaque problème trouvé, si tu le règles déjà.
+# Plus la liste des fonctionnalités est précise, plus les recommandations sont justes.
+mon_produit:
+  nom: "MonSaaS"
+  description: >
+    Décris ton SaaS en deux ou trois phrases : pour qui, quel problème il règle,
+    ce qui le distingue.
+  fonctionnalites:
+    - "Fonctionnalité 1"
+    - "Fonctionnalité 2"
+
+# Un bloc par concurrent. Toutes les sources sont facultatives : mets celles qui existent.
+concurrents:
+  - nom: "Concurrent A"
+
+    # Google Play : l'identifiant après « ?id= » dans l'URL de la fiche
+    # (ex. https://play.google.com/store/apps/details?id=com.exemple.app → com.exemple.app)
+    google_play: "com.exemple.app"
+
+    # App Store : le nombre après « /id » dans l'URL de la fiche
+    # (ex. https://apps.apple.com/fr/app/exemple/id123456789 → 123456789)
+    app_store: "123456789"
+
+    # Hacker News : mot recherché dans les commentaires (utile pour les SaaS B2B / tech)
+    hackernews: "Concurrent A"
+
+    # Reddit : nécessite une clé API Reddit gratuite (voir README)
+    reddit:
+      requete: '"Concurrent A"'          # recherche Reddit (les guillemets cherchent l'expression exacte)
+      mot_cle: "Concurrent A"            # on ne garde que les commentaires qui contiennent ce mot
+      subreddits: ["SaaS", "smallbusiness", "Entrepreneur"]
+      max_posts: 50
+
+    # Exports CSV / JSON / JSONL : G2, Capterra, Trustpilot (via Apify ou export manuel), sondages...
+    # Le chemin est relatif à ce fichier de config.
+    fichiers:
+      - chemin: "imports/concurrent_a_g2.csv"
+        source: "g2"
+        # Facultatif : indique les colonnes si elles ne sont pas reconnues automatiquement.
+        # Plusieurs colonnes de texte sont mises bout à bout.
+        # colonnes:
+        #   texte: ["cons", "review_text"]
+        #   note: "rating"
+        #   date: "date"
+        #   url: "url"
+        # echelle_note: 10     # si les notes sont sur 10 (ex. TrustRadius)
+
+    # Facultatif : pays et langue propres à ce concurrent (sinon ceux de « collecte »)
+    # pays: "us"
+    # langue: "en"
+
+  - nom: "Concurrent B"
+    google_play: "com.exemple.autreapp"
+    hackernews: "Concurrent B"
+
+collecte:
+  pays: "fr"                 # pays des stores (fr, be, ch, ca, us...)
+  langue: "fr"               # langue des avis Google Play
+  max_avis_par_source: 200   # par concurrent et par source
+
+analyse:
+  modele: "claude-opus-5-5"  # modèle Claude utilisé
+  note_max: 3                # on analyse les avis notés de 1 à 3 étoiles (+ ceux sans note)
+  taille_lot: 25             # nombre d'avis envoyés à Claude par requête
+  effort_extraction: "low"   # effort de réflexion pour lire chaque avis (low suffit en général)
+  effort_synthese: "high"    # effort pour regrouper en thèmes et rédiger les recommandations
+  max_themes: 25
+
+# Facultatif : où ranger les données et les rapports (relatif à ce fichier)
+# dossiers:
+#   donnees: "data"
+#   rapports: "rapports"

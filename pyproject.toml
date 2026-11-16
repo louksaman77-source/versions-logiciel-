@@ -1,0 +1,25 @@
+[project]
+name = "veille-avis"
+version = "0.1.0"
+description = "Analyse les avis des concurrents pour trouver quoi ajouter ou ajuster dans ton SaaS."
+requires-python = ">=3.10"
+dependencies = [
+    "anthropic>=2.9,<3",
+    "google-play-scraper>=1.2.7",
+    "praw>=7.8",
+    "PyYAML>=6.0",
+    "requests>=2.31",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[project.scripts]
+veille-avis = "veille_avis.cli:main"
+
+[tool.setuptools]
+packages = ["veille_avis", "veille_avis.collecteurs", "veille_avis.analyse"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
