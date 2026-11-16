@@ -1,0 +1,12 @@
+{
+  "reviews": [
+    {"reviewId": "b1", "publishedAt": "2026-10-01", "rating": {"value": 4, "max": 10}, "title": "Pas d'export", "cons": "Aucun export comptable, ni CSV ni FEC. Mon expert-comptable râle tous les mois."},
+    {"reviewId": "b2", "publishedAt": "2026-09-14", "rating": {"value": 2, "max": 10}, "title": "Support", "cons": "Le support met une semaine à répondre et ne règle jamais le problème."},
+    {"reviewId": "b3", "publishedAt": "2026-08-22", "rating": {"value": 6, "max": 10}, "title": "Lenteurs", "cons": "Très lent dès qu'on a plus de 200 clients, le chargement de la liste prend une éternité."},
+    {"reviewId": "b4", "publishedAt": "2026-10-09", "rating": {"value": 2, "max": 10}, "title": "Tarif", "cons": "Abonnement trop cher et facturé à l'année sans possibilité de payer au mois."},
+    {"reviewId": "b5", "publishedAt": "2026-07-30", "rating": {"value": 3, "max": 10}, "title": "Synchro", "cons": "La synchro avec la banque plante régulièrement, je passe mon temps à reconnecter."},
+    {"reviewId": "b6", "publishedAt": "2026-10-18", "rating": {"value": 5, "max": 10}, "title": "Compliqué", "cons": "Prise en main compliquée, il faut une formation pour comprendre les paramètres de TVA."},
+    {"reviewId": "b7", "publishedAt": "2026-06-11", "rating": {"value": 9, "max": 10}, "title": "Top", "cons": "Rien à redire."},
+    {"reviewId": "b8", "publishedAt": "2026-09-28", "rating": {"value": 1, "max": 10}, "title": "Je pars", "cons": "Facture envoyée avec le mauvais montant à cause d'un bug d'arrondi. J'ai désinstallé et je suis passé à autre chose."}
+  ]
+}

@@ -1,0 +1,15 @@
+# Secrets
+.env
+
+# Données collectées et rapports générés (peuvent contenir des avis en grand nombre)
+data/
+rapports/
+exemples/data/
+exemples/rapports/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/

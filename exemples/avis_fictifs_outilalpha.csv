@@ -1,0 +1,13 @@
+id,date,note,titre,texte
+a1,2026-09-12,1,Support injoignable,"Trois semaines sans réponse du support après un double prélèvement. Personne ne répond aux tickets, je résilie."
+a2,2026-08-30,2,Lent,"L'application est devenue très lente depuis la mise à jour, chaque facture met 10 secondes à s'ouvrir."
+a3,2026-10-02,2,Export comptable,"Impossible d'exporter mes factures vers mon logiciel comptable, il manque un export FEC. Je dois tout ressaisir."
+a4,2026-07-15,1,Hors de prix,"Le prix a augmenté de 40 % sans prévenir. Trop cher pour un indépendant, je suis passé à un concurrent."
+a5,2026-09-21,3,Bien mais,"Bon outil dans l'ensemble mais l'interface est confuse, on s'y perd dans les menus."
+a6,2026-10-11,2,Bug relances,"Les relances automatiques partent en double chez mes clients, c'est un bug gênant et pas professionnel."
+a7,2026-06-03,1,Données perdues,"J'ai perdu trois mois de devis après une synchronisation ratée. Aucune aide du service client."
+a8,2026-10-20,3,Appli mobile,"L'application mobile ne permet pas de créer un devis, seulement de consulter. Dommage."
+a9,2026-05-18,2,Résiliation,"Résilier l'abonnement est un parcours du combattant, il faut envoyer un courrier recommandé !"
+a10,2026-10-25,5,Parfait,"Très bon logiciel, je le recommande."
+a11,2026-09-05,2,Synchro bancaire,"La synchronisation bancaire se déconnecte toutes les semaines, il faut tout reconnecter à la main."
+a12,2026-08-08,1,Bloqué,"Le compte est bloqué depuis une erreur de paiement et le support ne répond pas. Je cherche une alternative."
